@@ -20,6 +20,6 @@ def get_user_id(usr_id):
 	getUs_Id = cursor.fetchall()
 	
 #Add Item
-def add_item(name: str, description: str, image_url: str, price: int, rating: float,):
-	cursor.execute('INSERT INTO Beers (name, description, image_url, price, rating) VALUES (%s, %s, %s, %s, %s)', (name, description, image_url, price, rating))
+def add_item(name: str, description: str, price: float, rating: int):
+	cursor.execute('INSERT INTO Beers (name, description, price, rating) VALUES (%s, %s, %s, %s)', (name, description, price, rating))
 	mydb.commit()
